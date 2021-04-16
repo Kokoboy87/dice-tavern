@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		{% load static %}
+		<link rel="stylesheet" href=" {% static 'css/style.css' %} " />
+		<title>Dice Tavern</title>
+	</head>
+	<body>
+		<img src=" {% static 'images/Tavern.jpg' %}" class="responsive" />
+		<div class="box">
+			<div class="content-0 content--active">
+				<section class="player player--0 player--active">
+					<h1 class="name" id="name--0">Player 1</h1>
+					<p class="score" id="score--0">40</p>
+					<div class="pop-window pop-player--0 hidden">
+						<button class="close-window window-0">&times;</button>
+						<h1>Player 1 You Won!!! 🏆</h1>
+					</div>
+					<div class="current">
+						<p class="current-label">Current</p>
+						<p class="current-score" id="current-score--0">0</p>
+					</div>
+				</section>
+			</div>
+			<div class="content-1">
+				<section class="player player--1">
+					<h1 class="name" id="name--1">Player 2</h1>
+					<p class="score" id="score--1">28</p>
+					<div class="pop-window pop-player--1 hidden">
+						<button class="close-window window-1">&times;</button>
+						<h1>Player 2 You Won!!! 🏆</h1>
+					</div>
+					<div class="current">
+						<p class="current-label">Current</p>
+						<p class="current-score" id="current-score--1">0</p>
+					</div>
+				</section>
+			</div>
+			<img
+				src="{% static 'images/dice-1.png' %}"
+				alt="Playing dice"
+				class="dice dice-1"
+			/>
+			<img src="{% static 'images/dice-2.png' %}" alt="Playing dice""
+			class="dice dice-2" />
+			<button class="btn btn--restart">🔁 Restart The Game</button>
+			<button class="btn btn--roll">🎲 Roll Dice</button>
+			<button class="btn btn--keep">📥 Keep Points</button>
+		</div>
+		<div class="left-Player">
+			<h2>Player-1 Stats</h2>
+			<table class="table-left">
+				<thead>
+					<tr>
+						<th>Life</th>
+						<th>Damage</th>
+						<th>Defence</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="life-0" id="life--0">50</td>
+						<td class="damage-0" id="damage--0">5</td>
+						<td class="defence-0" id="defence--0">5</td>
+					</tr>
+				</tbody>
+			</table>
+			<button class="btn-life-0 btn-player--0">🍺 Beer!!!</button>
+			<button class="btn-damage-0 btn-player--0">🪑 Chair</button>
+			<button class="btn-defence-0 btn-player--0">🛡 Shield</button>
+			<button class="btn-attack-0 btn-player--0">🪓 Aaaattack!!!!</button>
+			<img src="{% static 'images/Goblin_left.jpg' %}" class="leftside" />
+		</div>
+		<div class="right-Player">
+			<img
+				src="{% static 'images/Goblin_right.jpg' %}"
+				class="rightside"
+			/>
+			<button class="btn-life-1 btn-player--1">🍺 Beer!!!</button>
+			<button class="btn-damage-1 btn-player--1">🪑 Chair</button>
+			<button class="btn-defence-1 btn-player--1">🛡 Shield</button>
+			<button class="btn-attack-1 btn-player--1">🪓 Aaaattack!!!!</button>
+			<h2>Player-2 Stats</h2>
+			<table class="table-right">
+				<thead>
+					<tr>
+						<th>Life</th>
+						<th>Damage</th>
+						<th>Defence</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="life-1" id="life--1">50</td>
+						<td class="damage-1" id="damage--1">5</td>
+						<td class="defence-1" id="defence--1">5</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="overlay hidden"></div>
+		<script src="{% static 'js/script.js' %}"></script>
+	</body>
+</html>

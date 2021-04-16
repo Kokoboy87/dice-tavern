@@ -1,0 +1,117 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+section {
+	height: 100vh;
+	background: #000;
+}
+
+video {
+	object-fit: cover;
+}
+
+h1 {
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50);
+	width: 100%;
+	text-align: center;
+	color: rgba(7, 231, 108, 0.904);
+	font-size: 5em;
+	font-family: sans-serif;
+	letter-spacing: 0.2em;
+}
+
+h1 span {
+	opacity: 0;
+	display: inline-block;
+	animation: animate 1s linear forwards;
+}
+
+@keyframes animate {
+	0% {
+		opacity: 0;
+		transform: rotateY(90deg);
+		filter: blur(10px);
+	}
+	100% {
+		opacity: 1;
+		transform: rotateY(0deg);
+		filter: blur(0px);
+	}
+}
+
+h1 span:nth-child(1) {
+	animation-delay: 1s;
+}
+h1 span:nth-child(2) {
+	animation-delay: 1.25s;
+}
+h1 span:nth-child(3) {
+	animation-delay: 1.5s;
+}
+h1 span:nth-child(4) {
+	animation-delay: 1.75s;
+}
+h1 span:nth-child(5) {
+	animation-delay: 2.25s;
+}
+h1 span:nth-child(6) {
+	animation-delay: 2.75s;
+}
+h1 span:nth-child(7) {
+	animation-delay: 3.25s;
+}
+h1 span:nth-child(8) {
+	animation-delay: 3.75s;
+}
+h1 span:nth-child(9) {
+	animation-delay: 4.25s;
+}
+h1 span:nth-child(10) {
+	animation-delay: 4.75s;
+}
+h1 span:nth-child(11) {
+	animation-delay: 5.25s;
+}
+
+.btn {
+	position: absolute;
+	bottom: 1rem;
+	left: 50%;
+	/* transform: translateY(-50%); */
+	color: rgba(98, 170, 91, 0.801);
+	background: none;
+	border: none;
+	font-family: sans-serif;
+	font-weight: bold;
+	font-size: 15px;
+	text-transform: uppercase;
+	cursor: pointer;
+	transition: all 0.2s;
+
+	/* background-color: #fff; */
+	background-color: rgba(74, 60, 88, 0.418);
+	/* backdrop-filter: blur(80px); */
+
+	padding: 10px;
+	border-radius: 5px;
+	box-shadow: 2px 3px 4px 1px rgba(7, 231, 108, 0.904);
+}
+
+.btn:active {
+	transform: translate(-5%, 3px);
+	box-shadow: 2px 4px 12px 3px rgb(99, 187, 187);
+}
+
+.btn:focus {
+	outline: none;
+}
+
+/* span:nth-of-type(even){
+    color: orange;
+} */
